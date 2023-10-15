@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -132,4 +134,36 @@ nav{
     position: absolute;
     bottom: 30px;
     left: 20px;
+}
+
+.container{
+    padding: 50px 200px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    background-color: white;
+}
+.container img{
+    width: 600px;
+    height: 600px;
+}
+.flower-about{
+    padding: 80px 10px 50px 10px;
+    column-gap: 30px;
+    
+}
+.flower-about h2{
+    font-size: 32px;
+}
+.flower-about h3{
+   margin-top: 15px;
+}
+.flower-about p{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.copyright{
+    text-align: center;
+    text-transform: capitalize;
 }
