@@ -23,6 +23,7 @@ nav{
 }
 
 .main-part{
+    transition-duration: .5s;
     width: 80%;
     margin: 30px auto;
 }
@@ -136,17 +137,23 @@ nav{
     left: 20px;
 }
 
+.flower-window{
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    left: -1500px;
+    transition-duration: .5s;
+}
 .container{
-    padding: 50px 200px;
-    height: 100%;
+    padding: 50px 100px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 45px;
-    background-color: white;
+    gap: 50px;
 }
 .container img{
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 500px;
 }
 .flower-about{
     padding: 80px 10px 50px 10px;
@@ -158,6 +165,7 @@ nav{
 }
 .flower-about h3{
    margin-top: 15px;
+   font-weight: 500;
 }
 .flower-about p{
     margin-top: 15px;

@@ -5,6 +5,15 @@ const crossIcon = document.querySelector('.fa-xmark');
 const costNavBody = document.querySelector('.body');
 const block = document.querySelector('.block');
 const costPrice = document.querySelector('.cost-price');
+const mainPart = document.querySelector('.main-part');
+const logo = document.querySelector('.logo')
+
+const increament = document.querySelector('.increament');
+const deccreament = document.querySelector('.decreament');
+const countNumber = document.querySelector('.count-number');
+const checkout = document.querySelector('.checkout');
+const removeIcon = document.querySelector('.fa-trash-can');
+const itemname = document.querySelector('.itemname');
 
 const arr = []
 
@@ -27,13 +36,6 @@ function mainPartFunction(itemName, itemPrice) {
     document.querySelector('.cart-empty').style.display='none'
     block.style.display='flex'
     costPrice.textContent = itemPrice;
-    
-    const increament = document.querySelector('.increament');
-    const deccreament = document.querySelector('.decreament');
-    const countNumber = document.querySelector('.count-number');
-    const checkout = document.querySelector('.checkout');
-    const removeIcon = document.querySelector('.fa-trash-can');
-    const itemname = document.querySelector('.itemname');
 
     itemname.textContent = itemName;
     
@@ -45,6 +47,7 @@ function mainPartFunction(itemName, itemPrice) {
         costPrice.textContent = 0.00
         document.querySelector('.cart-empty').style.display='block'
     })
+
     let count = 1;
     let num = itemPrice;
     increament.addEventListener('click', () => {
@@ -52,10 +55,12 @@ function mainPartFunction(itemName, itemPrice) {
         costPrice.textContent = num += itemPrice
         
     })
+
     deccreament.addEventListener('click', () => {
         countNumber.textContent = count -= 1
         costPrice.textContent = num -= itemPrice
     })
+
     checkout.addEventListener('click', () => {
         costNav.style.right='-700px'
         costNav.style.transitionDuration='.5s'
@@ -63,3 +68,15 @@ function mainPartFunction(itemName, itemPrice) {
     })
 }
     
+logo.addEventListener('click', () => {
+    mainPart.style.right = '100px'
+    document.querySelector('.flower-window').style.left = '-1500px'
+})
+
+function imgContent(item1name, itemprice){
+    document.querySelector('.flower-name').textContent = item1name
+    document.querySelector('.flower-cost').textContent = itemprice
+    document.querySelector('.flower-window').style.left = '0'
+    mainPart.style.position = 'absolute'
+    mainPart.style.right = '1500px'
+}
