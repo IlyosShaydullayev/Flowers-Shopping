@@ -17,6 +17,12 @@ const itemname = document.querySelector('.itemname');
 
 const arr = []
 
+function yaxlitlash(n) {
+    let b=Math.round(n*100);
+    let c=b/100;
+    return parseFloat(c);
+}
+
 balancedPrice.addEventListener('click', () => {
     // costNav.classList.add('appearance-nav')
     costNav.style.right='0'
@@ -52,13 +58,15 @@ function mainPartFunction(itemName, itemPrice) {
     let num = itemPrice;
     increament.addEventListener('click', () => {
         countNumber.textContent = count += 1
-        costPrice.textContent = num += itemPrice
+        costPrice.textContent = yaxlitlash(num += itemPrice)
         
     })
 
     deccreament.addEventListener('click', () => {
-        countNumber.textContent = count -= 1
-        costPrice.textContent = num -= itemPrice
+        if(count>0){
+            countNumber.textContent = count -= 1
+            costPrice.textContent = yaxlitlash(num -= itemPrice)
+        }
     })
 
     checkout.addEventListener('click', () => {
@@ -80,3 +88,4 @@ function imgContent(item1name, itemprice){
     mainPart.style.position = 'absolute'
     mainPart.style.right = '1500px'
 }
+
